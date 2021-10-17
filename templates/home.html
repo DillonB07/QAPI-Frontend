@@ -1,0 +1,82 @@
+{% extends 'base.html' %} {% block title %}Home{% endblock %} {% block content %}
+<h1>Home</h1>
+
+<h2>Information</h2>
+<div class='container'>
+	<div class='card'>
+		<h3>About QAPI</h3>
+		<p>QAPI is an API that I've worked on as a hobby project. It currently has {{questions}} questions with more being added
+			regularly!
+		</p>
+	</div>
+	<a href='https://dizzle.ml' target='_blank'>
+		<div class='card card-link'>
+			<h3>Dizzle</h3>
+			<p>Dizzle is a website that gives you a random quiz question for you to answer. It had its own API, but I decided to move
+				it into a seperate project so that anyone can use it.</p>
+		</div>
+	</a>
+	<a href='/statistics'>
+		<div class='card card-link'>
+			<h3>Statistics</h3>
+			<p>A statistics page for the amount of questions in different topics and the types of questions.
+			</p>
+		</div>
+	</a>
+    <a href='https://qapi-api.ml/docs' target='_blank'>
+		<div class='card card-link'>
+			<h3>Interactive Testing</h3>
+			<p>An interactive page that lets you test the endpoints and shows your what information needs to be passed.
+			</p>
+		</div>
+	</a>
+    <a href='https://github.com/DillonB07/QAPI' target='_blank'>
+		<div class='card card-link'>
+			<h3>GitHiub</h3>
+			<p>The source code for QAPI is available as a GitHub repository!</p>
+		</div>
+	</a>
+</div>
+
+<h2>Endpoints</h2>
+
+<div class='container'>
+	<a href='https://qapi-api.ml/docs#/default/random_question_random_question_get' target='_blank'>
+		<div class='card card-link'>
+			<h3>/random-question</h3>
+			<p>Returns a random question from a list of {{questions}} questions!</p>
+		</div>
+	</a>
+	<a href='https://qapi-api.ml/docs#/default/random_question_in_topic_topic__topic__random_question_get' target='_blank'>
+		<div class='card card-link'>
+			<h3>/topic/{topic}/random-question</h3>
+			<p>Returns a random question for the given topic</p>
+		</div>
+	</a>
+	<a href='https://qapi-api.ml/docs#/default/random_type_question_type__type__random_question_get' target='_blank'>
+		<div class='card card-link'>
+			<h3>/type/{type}/random-question</h3>
+			<p>Returns a random question of a given type</p>
+		</div>
+	</a>
+	<a href='https://qapi-api.ml/docs#/default/total_questions_statistics_total_get' target='_blank'>
+		<div class='card card-link'>
+			<h3>/statistics/total</h3>
+			<p>Returns the amount of questions</p>
+		</div>
+	</a>
+	<a href='https://qapi-api.ml/docs#/default/statistics_for_type_statistics_type__question_type__get' target='_blank'>
+		<div class='card card-link'>
+			<h3>/statistics/type/{question_type}</h3>
+			<p>Returns the amount of a certain type of question</p>
+		</div>
+	</a>
+	<a href='https://qapi-api.ml/docs#/default/statistics_for_topic_statistics_topic__topic__get' target='_blank'>
+		<div class='card card-link'>
+			<h3>/statistics/topic/{topic}</h3>
+			<p>Returns the amount of questions in a certain topic</p>
+		</div>
+	</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}Statistics{% endblock %}
+{% block content %}
+<h1>Statistics</h1>
+
+<table>
+    <caption>Amount of questions for specific topics and types.</caption>
+    <thead>
+        <tr>
+            <th>Topic</th>
+            <th>Number of questions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Entertainment</td>
+            <td>{{entertainment}}</td>
+        </tr>
+        <tr>
+            <td>Geography</td>
+            <td>{{geography}}</td>
+        </tr>
+        <tr>
+            <td>History</td>
+            <td>{{history}}</td>
+        </tr>
+        <tr>
+            <td>Leisure</td>
+            <td>{{leisure}}</td>
+        </tr>
+        <tr>
+            <td>Literature</td>
+            <td>{{literature}}</td>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>{{science}}</td>
+        </tr>
+        <tr>
+            <td>Technology</td>
+            <td>{{technology}}</td>
+            <br/>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Number of questions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Memory</td>
+            <td>{{memory}}</td>
+        </tr>
+        <tr>
+            <td>Multiple Choice</td>
+            <td>{{multi}}</td>
+        </tr>
+        <tr>
+            <td>Number</td>
+            <td>{{number}}</td>
+        </tr>
+        <tr>
+            <td>True or False</td>
+            <td>{{true_or_false}}</td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>Total</th>
+            <th>{{total}}</th>
+        </tr>
+    </thead>
+</table>
+
+{% endblock %}
