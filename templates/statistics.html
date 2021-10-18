@@ -1,77 +1,55 @@
-{% extends 'base.html' %}
-{% block title %}Statistics{% endblock %}
-{% block content %}
+{% extends 'base.html' %} {% block title %}Statistics{% endblock %} {% block content %}
 <h1>Statistics</h1>
 
-<table>
-    <caption>Amount of questions for specific topics and types.</caption>
-    <thead>
-        <tr>
-            <th>Topic</th>
-            <th>Number of questions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Entertainment</td>
-            <td>{{entertainment}}</td>
-        </tr>
-        <tr>
-            <td>Geography</td>
-            <td>{{geography}}</td>
-        </tr>
-        <tr>
-            <td>History</td>
-            <td>{{history}}</td>
-        </tr>
-        <tr>
-            <td>Leisure</td>
-            <td>{{leisure}}</td>
-        </tr>
-        <tr>
-            <td>Literature</td>
-            <td>{{literature}}</td>
-        </tr>
-        <tr>
-            <td>Science</td>
-            <td>{{science}}</td>
-        </tr>
-        <tr>
-            <td>Technology</td>
-            <td>{{technology}}</td>
-            <br/>
-        </tr>
-    </tbody>
-    <thead>
-        <tr>
-            <th>Type</th>
-            <th>Number of questions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Memory</td>
-            <td>{{memory}}</td>
-        </tr>
-        <tr>
-            <td>Multiple Choice</td>
-            <td>{{multi}}</td>
-        </tr>
-        <tr>
-            <td>Number</td>
-            <td>{{number}}</td>
-        </tr>
-        <tr>
-            <td>True or False</td>
-            <td>{{true_or_false}}</td>
-        </tr>
-    </tbody>
-    <thead>
-        <tr>
-            <th>Total</th>
-            <th>{{total}}</th>
-        </tr>
-    </thead>
-</table>
+
+
+<h2>Topics</h2>
+<div class='container'>
+	<div class='card'>
+		<h3>Entertainment</h3>
+		<p>Currently there are {{entertainment}} entertainment questions.</p>
+    </div>
+	<div class='card'>
+		<h3>Geography</h3>
+		<p>Currently there are {{geography}} geography questions.</p>
+	</div>
+	<div class='card'>
+		<h3>History</h3>
+		<p>Currently there are {{history}} history questions.</p>
+	</div>
+	<div class='card'>
+		<h3>Leisure</h3>
+		<p>Currently there are {{leisure}} leisure questions.</p>
+	</div>
+	<div class='card'>
+		<h3>Science</h3>
+		<p>Currently there are {{science}} science questions.</p>
+	</div>
+	<div class='card'>
+		<h3>Technology</h3>
+		<p>Currently there are {{technology}} technology questions.</p>
+	</div>
+</div>
+<h2>Types</h2>
+<div class='container'>
+	<div class='card'>
+		<h3>Memory</h3>
+		<p>Currently there are {{memory}} memory questions.</p>
+    </div>
+	<div class='card'>
+		<h3>Multiple choice</h3>
+		<p>Currently there are {{multi}} multiple choice questions.</p>
+	</div>
+	<div class='card'>
+		<h3>Number</h3>
+		<p>Currently there are {{number}} number questions.</p>
+	</div>
+	<div class='card'>
+		<h3>True or False</h3>
+		<p>Currently there are {{true_or_false}} true or false questions.</p>
+	</div>
+</div>
+
+<a class='button' href='/'>Home</a>
 
 {% endblock %}
