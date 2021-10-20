@@ -28,4 +28,4 @@ def statistics():
     return render_template('statistics.html', memory=memory, multi=multi, true_or_false=true, number=number, total=total_questions, literature=literature, geography=geography, history=history, entertainment=entertainment, science=science, leisure=leisure, technology=technology)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=8080)
