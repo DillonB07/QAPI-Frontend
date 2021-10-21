@@ -1,7 +1,16 @@
 {% extends 'base.html' %} {% block title %}Statistics{% endblock %} {% block content %}
 <h1>Statistics</h1>
 
-
+<div class='container'>
+    <div class='card'>
+        <h3>Statistics</h3>
+        <p>Here, you can view the amount of questions in each category.</p>
+    </div>
+    <div class='card'>
+        <h3>Total</h3>
+        <p>Currently there are {{total}} total questions on QAPI.</p>
+    </div>
+</div>
 
 <h2>Topics</h2>
 <div class='container'>
